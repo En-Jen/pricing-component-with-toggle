@@ -1,0 +1,94 @@
+// COLOR VARIABLES
+$color-blue-light: hsl(236, 72%, 79%);
+$color-blue: hsl(237, 63%, 64%);
+$color-gray-very-light: hsl(240, 78%, 98%);
+$color-gray-light: hsl(234, 14%, 74%);
+$color-gray: hsl(233, 13%, 49%);
+$color-gray-dark: hsl(232, 13%, 33%);
+
+// FONT VARIABLES
+$font-family: 'Montserrat', sans-serif;
+
+// FONT SIZE
+$default-font-size: 1.5rem;
+
+// GLOBAL
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; //1rem = 10px
+}
+
+body {
+
+}
+
+.pricing {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/bg-top.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-color: $color-gray-very-light;
+    font-family: $font-family;
+    color: $color-gray;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    &__heading {
+        font-size: 3.2rem;
+    }
+
+    &__toggler {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__text {
+        color: $color-gray-light;
+    }
+
+    &__switch {
+        
+    }
+}
+
+.card-containter {
+
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2.9rem;
+
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    // Professional card
+    &:nth-child(2) {
+        background-image: linear-gradient(to bottom right, $color-blue-light, $color-blue);
+        color: white;
+    }
+
+    &__heading {
+
+    }
+
+    &__price {
+
+    }
+}
