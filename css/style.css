@@ -9,37 +9,174 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; }
 
+body {
+  position: relative;
+  font-family: "Montserrat", sans-serif; }
+
 .pricing {
   width: 100%;
   min-height: 100vh;
+  padding: 6rem 2.4rem;
   background-image: url(../images/bg-top.svg);
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: 191px -35px;
   background-color: #f6f6fe;
-  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
   color: #6d708d;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  @media only screen and (min-width: 550px) {
+    .pricing {
+      background-position: top right; } }
 
-.header__heading {
-  font-size: 3.2rem; }
+.header {
+  margin-bottom: 5rem; }
+  .header__heading {
+    font-size: 3.2rem;
+    margin-bottom: 3rem; }
+  .header__toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .header__text {
+    color: #b3b5c6;
+    padding: 2rem; }
+  .header__switch {
+    position: relative; }
+    .header__switch input {
+      width: 0;
+      height: 0;
+      display: none;
+      visibility: hidden; }
+    .header__switch label {
+      display: block;
+      width: 5.6rem;
+      height: 3.2rem;
+      text-indent: -9999px;
+      background-image: linear-gradient(to bottom right, #a3a8f0, #696fdd);
+      border-radius: 50px;
+      cursor: pointer;
+      transition: opacity .3s; }
+    .header__switch label::after {
+      content: '';
+      height: 2.4rem;
+      width: 2.4rem;
+      border-radius: 50%;
+      background-color: white;
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      transition: right .3s ease; }
+    .header__switch input:checked + label::after {
+      right: calc(100% - 28px); }
+    .header__switch label:hover {
+      opacity: 60%; }
 
-.header__toggler {
+.card-container {
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center; }
 
-.header__text {
-  color: #b3b5c6; }
-
 .card {
+  width: 100%;
+  max-width: 350px;
+  min-width: 270px;
   background-color: white;
   border-radius: 10px;
-  padding: 2.9rem; }
+  padding: 2.9rem;
+  box-shadow: 0 20px 40px #d4d2f4; }
   .card:not(:last-child) {
+    margin-bottom: 3rem; }
+  .card__heading {
+    font-size: 1.8rem;
     margin-bottom: 2rem; }
-  .card:nth-child(2) {
+  .card__price {
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #494c5f;
+    margin-bottom: 2.5rem; }
+    .card__price span {
+      font-size: 7.2rem;
+      margin-left: .5rem; }
+  .card__price--year {
+    display: none; }
+  .card__features {
+    margin-bottom: 3rem; }
+  .card__feature {
+    letter-spacing: 1px;
+    list-style: none;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(110, 114, 142, 0.25); }
+    .card__feature:first-child {
+      border-top: 1px solid rgba(110, 114, 142, 0.25); }
+  .card__btn {
+    cursor: pointer;
+    width: 100%;
+    height: 4.4rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     background-image: linear-gradient(to bottom right, #a3a8f0, #696fdd);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    transition: all .4s; }
+  .card__btn:hover {
+    background-color: transparent;
+    color: #6e73de;
+    border: 1px solid #6e73de; }
+  .card__btn:hover:not(:nth-child(2)) {
+    background-image: none; }
+
+.card--blue {
+  background-image: linear-gradient(to bottom right, #a3a8f0, #696fdd);
+  color: white; }
+  .card--blue .card__price {
     color: white; }
+  .card--blue .card__feature {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25); }
+    .card--blue .card__feature:first-child {
+      border-top: 1px solid rgba(255, 255, 255, 0.25); }
+  .card--blue .card__btn {
+    background-color: white;
+    background-image: none;
+    color: #6e73de; }
+  .card--blue .card__btn:hover {
+    color: white;
+    background-color: transparent;
+    border: 1px solid white; }
+
+.attribution {
+  color: #6d708d;
+  font-size: 11px;
+  line-height: 1.6rem;
+  text-align: center;
+  position: absolute;
+  bottom: .5rem;
+  left: 50%;
+  transform: translateX(-50%); }
+  .attribution a {
+    color: #6e73de;
+    text-decoration: none;
+    position: relative; }
+  .attribution a::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #6e73de;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform .3s; }
+  .attribution a:hover::after {
+    transform: scaleX(1); }
