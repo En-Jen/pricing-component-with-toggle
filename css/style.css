@@ -16,7 +16,7 @@ body {
 .pricing {
   width: 100%;
   min-height: 100vh;
-  padding: 6rem 2.4rem;
+  padding: 6.5rem 2.4rem;
   background-image: url(../images/bg-top.svg);
   background-repeat: no-repeat;
   background-position: 191px -35px;
@@ -33,17 +33,17 @@ body {
       background-position: top right; } }
 
 .header {
-  margin-bottom: 5rem; }
+  margin-bottom: 6.5rem; }
   .header__heading {
     font-size: 3.2rem;
-    margin-bottom: 3rem; }
+    margin-bottom: 2.5rem; }
   .header__toggler {
     display: flex;
     justify-content: center;
     align-items: center; }
   .header__text {
     color: #b3b5c6;
-    padding: 2rem; }
+    padding: 2.2rem; }
   .header__switch {
     position: relative; }
     .header__switch input {
@@ -91,7 +91,7 @@ body {
   padding: 2.9rem;
   box-shadow: 0 20px 40px #d4d2f4; }
   .card:not(:last-child) {
-    margin-bottom: 3rem; }
+    margin-bottom: 3.3rem; }
   .card__heading {
     font-size: 1.8rem;
     margin-bottom: 2rem; }
@@ -104,15 +104,14 @@ body {
     margin-bottom: 2.5rem; }
     .card__price span {
       font-size: 7.2rem;
-      margin-left: .5rem; }
+      margin-left: .3rem; }
   .card__price--year {
     display: none; }
   .card__features {
-    margin-bottom: 3rem; }
+    margin-bottom: 3.5rem; }
   .card__feature {
-    letter-spacing: 1px;
     list-style: none;
-    padding: 1.5rem;
+    padding: 1.6rem;
     border-bottom: 1px solid rgba(110, 114, 142, 0.25); }
     .card__feature:first-child {
       border-top: 1px solid rgba(110, 114, 142, 0.25); }
@@ -133,7 +132,8 @@ body {
   .card__btn:hover {
     background-color: transparent;
     color: #6e73de;
-    border: 1px solid #6e73de; }
+    border: 1px solid #6e73de;
+    transform: translateY(-3px); }
   .card__btn:hover:not(:nth-child(2)) {
     background-image: none; }
 
@@ -154,6 +154,12 @@ body {
     color: white;
     background-color: transparent;
     border: 1px solid white; }
+
+.toggle .card__price--month {
+  display: none; }
+
+.toggle .card__price--year {
+  display: flex; }
 
 .attribution {
   color: #6d708d;
